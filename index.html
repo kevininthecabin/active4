@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My First Web Page</title>
+<title>My Calendar Page</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet" />
 </head>
+
+<style>
+    #calendar{
+        width: 600px;
+        background-image: url("./images/myimage.png");
+        background-size: 600px 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    /* body{
+        background-image: url("./images/myimage.png");
+        background-size: cover;
+    } */
+</style>
+
 <body>
-<h1>My First Web Page</h1>
-<p>This is my first web page.</p>
-<img src="./images/myimage.png">
+<h1>My Calendar Page</h1>
+<div id="calendar"></div>
+<!-- /* style="width: 600px; height: 0px; margin: auto;" */ -->
+
+<!-- <img src="./images/myimage.png"> -->
+<!-- /* style="margin: auto; display: block; text-align: center; width: 600px;" */ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+<script>
+  // 페이지 로드 후 달력 초기화
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      // 달력 옵션 설정
+      // 여기에 달력에 관련된 옵션을 추가하고 설정합니다.
+      // 예: header, defaultView, events 등
+      
+      // 일정 데이터 설정
+      events: [
+    //     {
+    //       title: 'Event 1',
+    //       start: '2023-07-04T10:00:00',
+    //       end: '2023-07-04T12:00:00'
+    //     },
+    //     {
+    //       title: 'Event 2',
+    //       start: '2023-07-05T14:00:00',
+    //       end: '2023-07-05T16:00:00'
+    //     },
+        // 추가적인 일정 데이터를 여기에 작성합니다.
+      ]
+    });
+  });
+</script>
 </body>
 </html>
